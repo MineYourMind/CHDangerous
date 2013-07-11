@@ -1,10 +1,8 @@
-package com.brothercraft.chdangerous;
+package com.brothercraft.chdangerous.functions;
 
 import com.laytonsmith.PureUtilities.FileUtility;
-import com.laytonsmith.PureUtilities.TermColors;
 import com.laytonsmith.PureUtilities.Version;
 import com.laytonsmith.annotations.api;
-import com.laytonsmith.annotations.startup;
 import com.laytonsmith.core.CHVersion;
 import com.laytonsmith.core.Security;
 import com.laytonsmith.core.Static;
@@ -18,19 +16,9 @@ import com.laytonsmith.core.functions.Exceptions;
 import java.io.File;
 import java.util.logging.Level;
 
-public class CHDangerous {
+public class CHdFile {
 
-	@startup
-	public static void onEnable(){
-	    System.out.println(TermColors.BLINKON + TermColors.BG_RED + TermColors.BRIGHT_WHITE + "");
-	    System.out.println(TermColors.BLINKON + TermColors.BG_RED + TermColors.BRIGHT_WHITE + "============================ [CHDangerous] ============================ ");
-	    System.out.println(TermColors.BLINKON + TermColors.BG_RED + TermColors.BRIGHT_WHITE + "[WARNING]: CHDangerous contains functions that if used incorrectly can ruin your life.");
-	    System.out.println(TermColors.BLINKON + TermColors.BG_RED + TermColors.BRIGHT_WHITE + "PLEASE make sure you know what you are doing.");
-	    System.out.println(TermColors.BLINKON + TermColors.BG_RED + TermColors.BRIGHT_WHITE + "ANY DAMAGE DONE IS SOLEY THE RESPONSIBILITY OF THE SERVER OWNER / MAINTAINER.");
-	    System.out.println(TermColors.BLINKON + TermColors.BG_RED + TermColors.BRIGHT_WHITE + "ANYTHING CONTAINED IN THIS EXTENSION IS NOT GUARANTEED TO EVEN DO WHAT IT WAS DESIGNED TO DO");
-	    System.out.println(TermColors.BLINKON + TermColors.BG_RED + TermColors.BRIGHT_WHITE + "=======================================================================" + TermColors.BLINKOFF + TermColors.RESET);
-	    System.out.println(" ");
-	}
+	
 
 	@api
 	public static class chd_write extends AbstractFunction {
