@@ -1,3 +1,5 @@
 Function:
 
-file_write( path, content)
+chd_write(path, content, [action])
+
+chd_target(player)
