@@ -13,6 +13,7 @@ import com.laytonsmith.annotations.api;
 import com.laytonsmith.core.CHVersion;
 import com.laytonsmith.core.Static;
 import com.laytonsmith.core.constructs.CInt;
+import com.laytonsmith.core.constructs.CNull;
 import com.laytonsmith.core.constructs.Construct;
 import com.laytonsmith.core.constructs.Target;
 import com.laytonsmith.core.environments.CommandHelperEnvironment;
@@ -69,7 +70,11 @@ public class CHdPlayer {
 		    }
 		}
 	    }
-	    return new CInt(target.getEntityId(), t);
+	    if (target == null) {
+		return new CNull(t);
+	    } else {
+		return new CInt(target.getEntityId(), t);
+	    }
 	}
 
 	public String getName() {
