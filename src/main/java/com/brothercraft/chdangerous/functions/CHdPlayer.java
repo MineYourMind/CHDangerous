@@ -4,11 +4,8 @@
  */
 package com.brothercraft.chdangerous.functions;
 
-import com.avaje.ebean.validation.AssertFalse;
 import com.laytonsmith.PureUtilities.Version;
-import com.laytonsmith.abstraction.MCEntity;
 import com.laytonsmith.abstraction.MCPlayer;
-import com.laytonsmith.abstraction.bukkit.BukkitMCPlayer;
 import com.laytonsmith.annotations.api;
 import com.laytonsmith.core.CHVersion;
 import com.laytonsmith.core.Static;
@@ -82,11 +79,11 @@ public class CHdPlayer {
 	}
 
 	public Integer[] numArgs() {
-	    return new Integer[]{1};
+	    return new Integer[]{1, 0};
 	}
 
 	public String docs() {
-	    return "gets the entity id of the entity the player is looking at";
+	    return "Integer {[Player]} gets the entity id of the entity the player is looking at";
 	}
 
 	public Version since() {
