@@ -1,6 +1,6 @@
 package com.brothercraft.chdangerous.functions;
 
-import com.laytonsmith.PureUtilities.FileUtility;
+import com.laytonsmith.PureUtilities.Common.FileUtil;
 import com.laytonsmith.PureUtilities.Version;
 import com.laytonsmith.annotations.api;
 import com.laytonsmith.core.CHVersion;
@@ -57,7 +57,7 @@ public class CHdFile {
 			}
 			try {
 			    File file = new File(location);
-			    FileUtility.write(content, file, mode, false);
+			    FileUtil.write(content, file, mode, false);
 			    return new CVoid(t);
 			} catch (Exception ex) {
 				Static.getLogger().log(Level.SEVERE, "Could not write in file while attempting to find " + new File(location).getAbsolutePath()
@@ -114,7 +114,7 @@ public class CHdFile {
 			    if(file.exists()) {
 				throw new ConfigRuntimeException(file.getAbsolutePath() + "Already Exists", Exceptions.ExceptionType.IOException, t);
 			    }
-			    FileUtility.write("", file, true);
+			    FileUtil.write("", file, true);
 			    return new CVoid(t);
 			} catch (Exception ex) {
 				Static.getLogger().log(Level.SEVERE, "Could not be created while attempting to find " + new File(location).getAbsolutePath()
@@ -171,7 +171,7 @@ public class CHdFile {
 			    if(!file.exists()) {
 				throw new ConfigRuntimeException(file.getAbsolutePath() + "Doesnt Exist", Exceptions.ExceptionType.IOException, t);
 			    }
-			    FileUtility.recursiveDelete(file);
+			    FileUtil.recursiveDelete(file);
 			    return new CVoid(t);
 			} catch (Exception ex) {
 				Static.getLogger().log(Level.SEVERE, "Could not delete the file while attempting to find " + new File(location).getAbsolutePath()
