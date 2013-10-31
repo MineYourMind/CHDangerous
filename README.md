@@ -1,3 +1,6 @@
+#CHDangerous
+
+
 # Functions
 ## Void chd\_delete(File):
 Deletes a file from the file system at location var1. The path is relative to the file that is being run, not CommandHelper. If the file doesnt exist, or otherwise can't deleted, an IOException is thrown. If the file specified is not within base-dir (as specified in the preferences file), a SecurityException is thrown.
