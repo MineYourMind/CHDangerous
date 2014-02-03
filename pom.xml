@@ -91,8 +91,8 @@
 					<mainClass>com.laytonsmith.PureUtilities.ClassLoading.Annotations.CacheAnnotations</mainClass>
  
 					<arguments>
-						<argument>/home/lsmith/NetBeansProjects/CommandHelper/target/classes</argument>
-						<argument>/home/lsmith/NetBeansProjects/CommandHelper/target/classes</argument>
+						<argument>${basedir}/target/classes</argument>
+						<argument>${basedir}/target/classes</argument>
 					</arguments>
 				</configuration>
 			</plugin>
