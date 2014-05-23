@@ -18,7 +18,7 @@ import java.util.logging.Level;
 
 public class CHdFile {
 
-	
+
 
 	@api
 	public static class chd_write extends AbstractFunction {
@@ -58,7 +58,7 @@ public class CHdFile {
 			try {
 			    File file = new File(location);
 			    FileUtil.write(content, file, mode, false);
-			    return new CVoid(t);
+			    return CVoid.VOID;
 			} catch (Exception ex) {
 				Static.getLogger().log(Level.SEVERE, "Could not write in file while attempting to find " + new File(location).getAbsolutePath()
 					+ "\nFile " + (new File(location).exists() ? "exists" : "does not exist"));
@@ -83,9 +83,9 @@ public class CHdFile {
 
 	public Version since() {
 	    return CHVersion.V3_3_1;
-	}   
+	}
     }
-	
+
     @api
     public static class chd_create extends AbstractFunction {
 
@@ -115,7 +115,7 @@ public class CHdFile {
 				throw new ConfigRuntimeException(file.getAbsolutePath() + "Already Exists", Exceptions.ExceptionType.IOException, t);
 			    }
 			    FileUtil.write("", file, true);
-			    return new CVoid(t);
+			    return CVoid.VOID;
 			} catch (Exception ex) {
 				Static.getLogger().log(Level.SEVERE, "Could not be created while attempting to find " + new File(location).getAbsolutePath()
 					+ "\nFile " + (new File(location).exists() ? "exists" : "does not exist"));
@@ -140,9 +140,9 @@ public class CHdFile {
 
 	public Version since() {
 	    return CHVersion.V3_3_1;
-	}   
+	}
     }
-    
+
     @api
     public static class chd_delete extends AbstractFunction {
 
@@ -172,7 +172,7 @@ public class CHdFile {
 				throw new ConfigRuntimeException(file.getAbsolutePath() + "Doesnt Exist", Exceptions.ExceptionType.IOException, t);
 			    }
 			    FileUtil.recursiveDelete(file);
-			    return new CVoid(t);
+			    return CVoid.VOID;
 			} catch (Exception ex) {
 				Static.getLogger().log(Level.SEVERE, "Could not delete the file while attempting to find " + new File(location).getAbsolutePath()
 					+ "\nFile " + (new File(location).exists() ? "exists" : "does not exist"));
@@ -197,6 +197,6 @@ public class CHdFile {
 
 	public Version since() {
 	    return CHVersion.V3_3_1;
-	}   
-    }    
+	}
+    }
 }
