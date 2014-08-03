@@ -2,7 +2,6 @@
 package com.brothercraft.chdangerous;
 
 import com.laytonsmith.PureUtilities.SimpleVersion;
-import com.laytonsmith.PureUtilities.TermColors;
 import com.laytonsmith.PureUtilities.Version;
 import com.laytonsmith.core.extensions.AbstractExtension;
 import com.laytonsmith.core.extensions.MSExtension;

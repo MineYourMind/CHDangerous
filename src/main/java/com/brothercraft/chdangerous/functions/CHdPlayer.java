@@ -18,7 +18,6 @@ import com.laytonsmith.core.environments.Environment;
 import com.laytonsmith.core.exceptions.ConfigRuntimeException;
 import com.laytonsmith.core.functions.AbstractFunction;
 import com.laytonsmith.core.functions.Exceptions.ExceptionType;
-import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -68,7 +67,7 @@ public class CHdPlayer {
 		}
 	    }
 	    if (target == null) {
-		return CNull.NULL;
+		return new CNull(null);
 	    } else {
 		return new CInt(target.getEntityId(), t);
 	    }
